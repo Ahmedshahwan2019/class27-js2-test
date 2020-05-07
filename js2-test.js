@@ -1,5 +1,5 @@
-// Name:
-// Class:
+// Name: ahmed shahwan
+// Class: 27
 
 // JavaScript1
 
@@ -13,6 +13,20 @@
     Expected output:
     'Noer is 28 and works as an Education Director'
 */
+const person ={
+    name:'Noer',
+    age:28,
+    job:'Education Director'
+}
+const logObj = (obj) =>{
+
+  for (let i = 0; i < obj.length; i++) {
+      const user = obj[i];      
+      return `${user.name} is ${user.age} and works as an ${user.job}!`
+  }
+
+}
+logObj(person)
 
 /* 2. Create a function, named logNumbers, that:
       - Takes 2 arguments: a start number and an end number
@@ -37,8 +51,20 @@
       FizzBuzz
 
       Use the following values: 1 (start number) and 100 (end number)
+    
 */
+ const logNumbers = (startNum ,endNum) =>{
+     for (let i = 0; i < startNum.length; i++) {
+         const number = startNum[i];
+         if( number % 3){
+             return "fizz"
+         }else if(number % 5){
+         return 'Buzz'
+         } else if(number > 5){
+         return '“FizzBuzz”'
+     }
 
+ }
 // JavaScript2
 
 /* 3. Create a function, named toNumbers, that:
@@ -54,6 +80,21 @@
 
       Use the following array: const letters = ['a', 'b', 'c', 'd'];
 */
+const letters = ['a', 'b', 'c', 'd'];
+const indexNumbers =[]
+
+function toNumbers(arr){
+//    for (let i = 0; i < arr.length; i++) {
+//        const letter = arr[i];
+//        indexNumbers.push(letter)
+       
+//    }
+
+   let letter= arr.map(val => val)
+   indexNumbers.push(letter)
+
+}
+toNumbers(letters)
 
 /* 4. Create a function, called injectBooksToDOM, that:
       - Takes 1 argument: an array of objects
@@ -104,3 +145,6 @@ function test() {
 }
 test(); // ?
 */
+// one will be the first output  and six 2nd will be the output 
+//fuor and two print after becouse it has a call back function with set time 0(asynchronous)
+//three and five print after becouse it has a call back function with set time 1000(asynchronous)
