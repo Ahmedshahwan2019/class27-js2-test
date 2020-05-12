@@ -13,20 +13,20 @@
     Expected output:
     'Noer is 28 and works as an Education Director'
 */
-const person ={
-    name:'Noer',
-    age:28,
-    job:'Education Director'
-}
-const logObj = (obj) =>{
+// const person ={
+//     name:'Noer',
+//     age:28,
+//     job:'Education Director'
+// }
+// const logObj = (user) =>{
 
-  for (let i = 0; i < obj.length; i++) {
-      const user = obj[i];      
-      return `${user.name} is ${user.age} and works as an ${user.job}!`
-  }
+//     const result = `${user.name} is ${user.age} and works as an ${user.job}!`;
+//     console.log(result)
+    
+//     return result;
+// }
 
-}
-logObj(person)
+// logObj(person)
 
 /* 2. Create a function, named logNumbers, that:
       - Takes 2 arguments: a start number and an end number
@@ -53,18 +53,21 @@ logObj(person)
       Use the following values: 1 (start number) and 100 (end number)
     
 */
- const logNumbers = (startNum ,endNum) =>{
-     for (let i = 0; i < startNum.length; i++) {
-         const number = startNum[i];
-         if( number % 3){
-             return "fizz"
-         }else if(number % 5){
-         return 'Buzz'
-         } else if(number > 5){
-         return '“FizzBuzz”'
-     }
-
- }
+//  const logNumbers = (startNum ,endNum) =>{
+//      for (let i = startNum; i <= endNum; i++) {
+//         if (i % 3 === 0 && i % 5 ===0){
+//             console.log('FizzBuzz')
+//         }else if(i % 5 === 0 ){
+//             console.log('Buzz')
+//         }else if(i % 3 === 0 ){
+//             console.log('Fizz')
+//         }else{
+//             console.log(i)
+//         }
+//         // console.log('hi' ,i)
+//     }
+//  }
+//  logNumbers(1,100)
 // JavaScript2
 
 /* 3. Create a function, named toNumbers, that:
@@ -80,21 +83,15 @@ logObj(person)
 
       Use the following array: const letters = ['a', 'b', 'c', 'd'];
 */
-const letters = ['a', 'b', 'c', 'd'];
-const indexNumbers =[]
+// const letters = ['a', 'b', 'c', 'd'];
+// // const indexNumbers =[]
 
-function toNumbers(arr){
-//    for (let i = 0; i < arr.length; i++) {
-//        const letter = arr[i];
-//        indexNumbers.push(letter)
-       
-//    }
+// function toNumbers(arr){
+//    let indexNum= arr.map((item , index) => index+1)
+//   console.log(indexNum)
 
-   let letter= arr.map(val => val)
-   indexNumbers.push(letter)
-
-}
-toNumbers(letters)
+// }
+// toNumbers(letters)
 
 /* 4. Create a function, called injectBooksToDOM, that:
       - Takes 1 argument: an array of objects
@@ -104,7 +101,7 @@ toNumbers(letters)
       - Returns true if it works, false if it doesn't
   
       Target the '#root' element in 'index.html'.
-      Use the following object: 
+      Use the following object: */
       const books = [
             {
                   bookName: "The Nature of Software Development",
@@ -119,13 +116,35 @@ toNumbers(letters)
                         "https://images-na.ssl-images-amazon.com/images/I/515iEcDr1GL._SX258_BO1,204,203,200_.jpg"
             }
       ];
-*/
+      const  injectBooksToDOM = (arr) =>{
+          const root =document.getElementById('root');
+          const ul = document.createElement('ul');
+            const addEl = root.appendChild(ul)
+        arr.forEach(book => {
+              const li = document.createElement('li');
+              const img =document.createElement('img')
+              li.innerText = `${book.bookName} ${book.author}`
+              ul.appendChild(li)
+              li.appendChild(img)
+              img.src= book.coverURL
+            
+           
+        });
+    
+      } 
+      
+       injectBooksToDOM(books)
+//       let ul = document.createElement=("ul")
+//       let arr = books.forEach(book => {
+//       let li = document.createElement=("li")
+
+//  })
 
 /*
 5. What's the output for this snippet? Is the output deterministic (always the same) or might it depend on the browser
 we run this in? 
 Explain your answer in less than 150 words. (The 'yes or no' answer doesn't really matter to us, 
-the explanation why is the important part)
+the explanation why is the important part)*/
 
 function test() {
     console.log('one');
@@ -144,7 +163,8 @@ function test() {
     console.log('six');
 }
 test(); // ?
-*/
+
+
 // one will be the first output  and six 2nd will be the output 
 //fuor and two print after becouse it has a call back function with set time 0(asynchronous)
 //three and five print after becouse it has a call back function with set time 1000(asynchronous)
