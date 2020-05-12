@@ -13,20 +13,20 @@
     Expected output:
     'Noer is 28 and works as an Education Director'
 */
-// const person ={
-//     name:'Noer',
-//     age:28,
-//     job:'Education Director'
-// }
-// const logObj = (user) =>{
+const person ={
+    name:'Noer',
+    age:28,
+    job:'Education Director'
+}
+const logObj = (user) =>{
 
-//     const result = `${user.name} is ${user.age} and works as an ${user.job}!`;
-//     console.log(result)
+    const result = `${user.name} is ${user.age} and works as an ${user.job}!`;
+    console.log(result)
     
-//     return result;
-// }
+    return result;
+}
 
-// logObj(person)
+logObj(person)
 
 /* 2. Create a function, named logNumbers, that:
       - Takes 2 arguments: a start number and an end number
@@ -53,21 +53,21 @@
       Use the following values: 1 (start number) and 100 (end number)
     
 */
-//  const logNumbers = (startNum ,endNum) =>{
-//      for (let i = startNum; i <= endNum; i++) {
-//         if (i % 3 === 0 && i % 5 ===0){
-//             console.log('FizzBuzz')
-//         }else if(i % 5 === 0 ){
-//             console.log('Buzz')
-//         }else if(i % 3 === 0 ){
-//             console.log('Fizz')
-//         }else{
-//             console.log(i)
-//         }
-//         // console.log('hi' ,i)
-//     }
-//  }
-//  logNumbers(1,100)
+ const logNumbers = (startNum ,endNum) =>{
+     for (let i = startNum; i <= endNum; i++) {
+        if (i % 3 === 0 && i % 5 ===0){
+            console.log('FizzBuzz')
+        }else if(i % 5 === 0 ){
+            console.log('Buzz')
+        }else if(i % 3 === 0 ){
+            console.log('Fizz')
+        }else{
+            console.log(i)
+        }
+        // console.log('hi' ,i)
+    }
+ }
+ logNumbers(1,100)
 // JavaScript2
 
 /* 3. Create a function, named toNumbers, that:
@@ -83,15 +83,15 @@
 
       Use the following array: const letters = ['a', 'b', 'c', 'd'];
 */
-// const letters = ['a', 'b', 'c', 'd'];
-// // const indexNumbers =[]
+const letters = ['a', 'b', 'c', 'd'];
+// const indexNumbers =[]
 
-// function toNumbers(arr){
-//    let indexNum= arr.map((item , index) => index+1)
-//   console.log(indexNum)
+function toNumbers(arr){
+   let indexNum= arr.map((item , index) => index+1)
+  console.log(indexNum)
 
-// }
-// toNumbers(letters)
+}
+toNumbers(letters)
 
 /* 4. Create a function, called injectBooksToDOM, that:
       - Takes 1 argument: an array of objects
@@ -134,9 +134,7 @@
       } 
       
        injectBooksToDOM(books)
-//       let ul = document.createElement=("ul")
-//       let arr = books.forEach(book => {
-//       let li = document.createElement=("li")
+
 
 //  })
 
